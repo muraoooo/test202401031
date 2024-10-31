@@ -1,0 +1,145 @@
+---
+import DocsLayout from '../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Next.js 完全解説ドキュメント">
+  <div class="hero">
+    <h1>Next.js 完全解説</h1>
+    <p class="subtitle">
+      React開発者のための最高のフレームワーク、Next.jsの詳細解説ドキュメント
+    </p>
+    <div class="cta-buttons">
+      <a href="/docs/getting-started" class="primary-button">はじめる</a>
+      <a href="/docs/examples" class="secondary-button">実装例を見る</a>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>🚀 高速な開発体験</h3>
+      <p>
+        Hot Reloadingによるリアルタイムプレビュー、
+        直感的なファイルベースルーティング、
+        最適化された開発環境を提供します。
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>⚡️ 最高のパフォーマンス</h3>
+      <p>
+        自動的なコード分割、画像最適化、
+        ハイブリッドレンダリングなど、
+        最高のパフォーマンスを実現します。
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🛠 柔軟なデータフェッチング</h3>
+      <p>
+        SSG、SSR、ISR、CSRなど、
+        ユースケースに応じた最適な
+        データフェッチング方法を選択できます。
+      </p>
+    </div>
+  </div>
+</DocsLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #0070f3, #00a6ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  .primary-button, .secondary-button {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .primary-button:hover, .secondary-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .primary-button {
+    background: #0070f3;
+    color: white;
+  }
+
+  .secondary-button {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .feature-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0070f3;
+  }
+
+  .feature-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      padding: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,200 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="はじめに - Next.js">
+  <article class="docs-content">
+    <h1>Next.jsとは</h1>
+    
+    <div class="introduction">
+      <p>
+        Next.jsは、Reactベースのフルスタックフレームワークです。
+        高速なパフォーマンス、優れた開発体験、そして本番環境に必要な
+        あらゆる機能を提供します。
+      </p>
+    </div>
+
+    <h2>なぜNext.jsを選ぶのか？</h2>
+    
+    <div class="benefits">
+      <div class="benefit-item">
+        <h3>📦 ゼロコンフィグ</h3>
+        <p>
+          面倒な設定は不要です。Next.jsは最適な設定が
+          あらかじめ用意されているため、すぐに開発を
+          始めることができます。
+        </p>
+      </div>
+
+      <div class="benefit-item">
+        <h3>🎯 ファイルベースルーティング</h3>
+        <p>
+          ページやAPIのルーティングは、ファイルシステムベース。
+          直感的で管理がしやすく、複雑な設定は必要ありません。
+        </p>
+      </div>
+
+      <div class="benefit-item">
+        <h3>⚡️ ハイブリッドレンダリング</h3>
+        <p>
+          ページごとに最適なレンダリング方法を選択可能。
+          SSG、SSR、ISR、CSRを柔軟に組み合わせることができます。
+        </p>
+      </div>
+    </div>
+
+    <h2>インストール方法</h2>
+    
+    <div class="installation">
+      <p>
+        create-next-appを使用して、新しいプロジェクトを作成できます：
+      </p>
+
+      <div class="code-block">
+        <pre><code>npx create-next-app@latest my-app
+cd my-app
+npm run dev</code></pre>
+      </div>
+
+      <p>
+        これだけで、開発サーバーが起動し、
+        <code>http://localhost:3000</code>でアプリケーションが
+        利用可能になります。
+      </p>
+    </div>
+
+    <div class="next-steps">
+      <h2>次のステップ</h2>
+      <ul>
+        <li>
+          <a href="/docs/project-structure">
+            プロジェクト構成を理解する →
+          </a>
+        </li>
+        <li>
+          <a href="/docs/routing">
+            ルーティングについて学ぶ →
+          </a>
+        </li>
+        <li>
+          <a href="/docs/data-fetching">
+            データフェッチングを実装する →
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</DocsLayout>
+
+<style>
+  .docs-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0070f3;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 3rem 0 1.5rem;
+    color: #333;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+    color: #0070f3;
+  }
+
+  .introduction {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .benefits {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .benefit-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #0070f3;
+  }
+
+  .benefit-item p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .code-block {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+  }
+
+  .code-block pre {
+    margin: 0;
+  }
+
+  .code-block code {
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+  }
+
+  .next-steps {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .next-steps ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .next-steps li {
+    margin: 1rem 0;
+  }
+
+  .next-steps a {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .next-steps a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .docs-content {
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .introduction {
+      font-size: 1.1rem;
+    }
+  }
+</style>
